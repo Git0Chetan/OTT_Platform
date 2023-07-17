@@ -205,3 +205,141 @@ header nav .search_user .search .card .cont span{
     margin:0px 5px;
     font-weight: 500;
 }
+
+header .content{
+    position:relative;
+    color:white;
+    margin-top: 50px;
+    padding-left: 50px;
+}
+
+header .content h1{
+    font-size: 50px;
+}
+
+header .content p{
+    font-size: 11px;
+    width:350px;
+    word-break: break-all;
+}
+
+header .content .details{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+header .content .details h6{
+    color:aliceblue;
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+header .content .details h5{
+    color:rgb(187, 198, 209,.8);
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+header .content .details h4{
+    color:rgb(14, 157, 24);
+    font-size: 10px;
+    margin-right: 10px;
+}
+header .content .details h3{
+    color:aliceblue;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+}
+
+header .content .details h3 span{
+    background-color: yellow;
+    color:rgb(9, 10, 10);
+    padding: 0px 3px;
+    margin:0px 5px;
+    font-weight: 500;
+}
+
+header .content .btns{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+header .content .btns a{
+    padding: 8px 12px;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(90deg,#00bdff,#0079ff);
+    border-radius: 5px;
+    color: white;
+    margin-left: 7px;
+    text-decoration: none;
+    animation: button 1s linear infinite;
+}
+
+@keyframes button{
+    0%{
+        background: linear-gradient(0deg,#00bdff,#0079ff);
+    }
+    12%{
+        background: linear-gradient(45deg,#00bdff,#0079ff);
+    }
+    24%{
+        background: linear-gradient(95deg,#00bdff,#0079ff);
+    }
+    36%{
+        background: linear-gradient(145deg,#00bdff,#0079ff);
+    }
+    48%{
+        background: linear-gradient(195deg,#00bdff,#0079ff);
+    }
+    60%{
+        background: linear-gradient(245deg,#00bdff,#0079ff);
+    }
+    72%{
+        background: linear-gradient(295deg,#00bdff,#0079ff);
+    }
+    100%{
+        background: linear-gradient(360deg,#00bdff,#0079ff);
+    }
+}
+
+
+header section{
+    position: absolute;
+    width:100%;
+    height:auto;
+    padding:0px 50px;
+    bottom:20px;
+    color:#fff;
+}
+
+header section div.cards{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border: 1px solid white;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+
+/* header section .cards::-webkit-scrollbar{
+    display: none;
+} */ 
+
+header section div.cards a.card{
+    display: flex;
+    position: relative;
+    min-width: 130px;
+    height: 180px;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin-right: 10px;
+    background: black;
+}
+
+
+
