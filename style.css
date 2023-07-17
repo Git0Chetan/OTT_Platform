@@ -160,7 +160,7 @@ header nav .search_user .search .card{
     margin-bottom: 5px;
     padding: 3px 0px;
     text-decoration: none;
-    display: none;
+    /* display: none; */
 }
 
 header nav .search_user .search .card::before{
@@ -319,11 +319,12 @@ header section div.cards{
     position: relative;
     width: 100%;
     height: 200px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     margin-top: 10px;
     display: flex;
     align-items: center;
     overflow-x: auto;
+    scroll-behavior: smooth;
 }
 
 /* header section .cards::-webkit-scrollbar{
@@ -336,10 +337,135 @@ header section div.cards a.card{
     min-width: 130px;
     height: 180px;
     border: 1px solid white;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     margin-right: 10px;
     background: black;
+    transition: .3s linear;
 }
 
+header section .cards .card .poster{
+    width:100%;
+    height:100%;
+    border-radius: 8px;
+    position: relative;
+}
+
+header section .cards .card:hover{
+    min-width:300px;
+    overflow: hidden;
+}
+
+header section .cards .card .rest_card{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius: 8px;
+    left:0;
+    top:0;
+    z-index: 999999;
+    opacity:0;
+    transition: 1s linear;
+}
+
+header section .cards .card .rest_card img{
+    position:relative;
+    width:100%;
+    height:100%;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+header section .cards .card .rest_card::after{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:linear-gradient(180deg,transparent,rgb(16, 15, 15));
+    left:0;
+    bottom: 0;
+    z-index:-1;    
+}
+
+header section .cards .card .rest_card .cont{
+      position: absolute;
+      width:100%;
+      bottom:10px;
+      left:0;
+      color:white;
+      padding:0px 20px;
+      z-index:99999;
+}
+
+header section .cards .card .rest_card .cont .sub{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+header section .cards .card .rest_card .cont .sub p{
+    font-size:12px;
+    font-weight:400;
+    color:rgb(105, 99, 99);
+
+}
+
+
+
+header section .cards .card .rest_card .cont .sub h3{
+    color:aliceblue;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+
+header section .cards .card .rest_card .cont .sub span{
+    background-color: yellow;
+    color:rgb(9, 10, 10);
+    padding: 0px 3px;
+    margin:0px 5px;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+
+header section .cards .card .rest_card .cont .sub i{
+    margin-right:3px;
+}
+
+
+header section .cards .card:hover .rest_card{
+    opacity: 1;
+}
+
+header section .bi-chevron-left,.bi-chevron-right{
+    position: absolute;
+    top:50%;
+    left:3%;
+    width:25px;
+    height:25px;
+    background: rgb(105, 99, 99);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+    cursor:pointer;
+    transition: .3s linear;
+    z-index:99999999;
+    opacity: 0;
+}
+
+header section:hover .bi-chevron-right{
+    left:unset;
+    right:3%;
+    opacity:1;
+}
+
+header section:hover .bi-chevron-left{
+    opacity:1;
+}
 
 
