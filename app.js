@@ -57,4 +57,5 @@ fetch(json_url).then(Response=>Response.json())
         `
         search.appendChild(card);
     });
+
 });
