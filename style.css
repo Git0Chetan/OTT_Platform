@@ -468,4 +468,49 @@ header section:hover .bi-chevron-left{
     opacity:1;
 }
 
+@media screen and (max-width:1250px){
+    header video{
+        position: absolute;
+        width:200%;
+        height:180%;
+    }
+}
+
+@media screen and (max-width:780px){
+    header{
+        width:100%;
+        height:100%;
+    }
+    header nav{
+        padding:0px 10px;
+        height:15%;
+    }
+    header nav .logo_ul ul{
+        position: absolute;
+        top:0px;
+        left:10px;
+    }
+    header nav .logo_ul ul li{
+        padding:3px 5px;
+    }
+    header nav .logo_ul ul li a{
+        font-size: 10px;
+    }
+    header .content{
+        padding-left:10px;
+    }
+    header section{
+        padding:0px 10px;
+    }
+}
+
+
+@media screen and (max-width:620px){
+    header video{
+        position: absolute;
+        width: 317%;
+        height: 183%;
+    }
+}
+
 
