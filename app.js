@@ -154,4 +154,35 @@ fetch(json_url).then(Response=>Response.json())
     })
     
 
+    let kid=document.getElementById('kid');
+    kid.addEventListener('click',()=>{
+        cards.innerHTML='';
+        
+        let kid_array= data.filter(ele=>{
+            return ele.type ==="kid";
+        });
+
+        kid_array.forEach((ele,i) => {
+            let {name,imdb,date,sposter,bposter,genre,url}=ele;
+            let card=document.createElement('a');
+            card.classList.add('card');
+            card.href=url;
+            card.innerHTML=`
+            <img src="${sposter}" class="poster" alt="${name}">
+            <div class="rest_card">
+                <img src="${bposter}" alt="">
+                <div class="cont">
+                    <h4>${name}</h4>
+                    <div class="sub">
+                        <p>${genre},${date}</p>
+                        <h3 id="rate"><span>IMDB</span><i class="bi bi-star-fill"></i>${imdb}</h3>
+                    </div>
+                </div>
+            </div>
+            `
+            cards.appendChild(card);
+        });
+
+    })
+
 });
