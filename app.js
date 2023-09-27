@@ -3,6 +3,23 @@ let right_btn=document.getElementsByClassName('bi-chevron-right')[0];
 let cards=document.getElementsByClassName('cards')[0];
 let search=document.getElementsByClassName('search')[0];
 let search_input=document.getElementById('search_input');
+let profile=document.getElementById("profile");
+let prof=document.getElementById("prof");
+let logout=document.getElementById("logout");
+
+
+profile.addEventListener("click",()=>{
+    if(prof.style.display=="block"){
+        prof.style.display="none";
+    }
+    else{
+        prof.style.display="block";
+    }
+})
+
+// logout.addEventListener("click",()=>{
+//     document.write("Thank You for Visiting US");
+// })
 
 left_btn.addEventListener('click',()=>{
     cards.scrollLeft-=140;

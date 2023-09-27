@@ -16,6 +16,11 @@ body{
     align-items: center;
     justify-content: center;
 }
+#prof{
+    display: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #fff,-1px -1px 2px #fff;
+}
 
 header{
     position: relative;
